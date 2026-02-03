@@ -14,7 +14,8 @@ public class Player_Movement : MonoBehaviour
 
     public float jumpSpeed;
     
-    public bool grounded;
+    private bool grounded;
+    private bool jumpPressed;
     float xInput, yInput;
     
 
@@ -22,7 +23,10 @@ public class Player_Movement : MonoBehaviour
     void Update()
     {
         CheckInput();
-        HandleJump();
+        if(Input.GetButtonDown("Jump"))
+        {
+            jumpPressed= true;
+        }
     }
 
     //usually for physics updates
@@ -30,13 +34,14 @@ public class Player_Movement : MonoBehaviour
     {
         CheckGround();
         HandleXMovement();
+        HandleJump();
         ApplyFriction();
     }
 
     void CheckInput()
     {
         xInput = Input.GetAxis("Horizontal");
-        yInput = Input.GetAxis("Vertical");
+        //yInput = Input.GetAxis("Vertical");
     }
 
     void HandleXMovement()
@@ -60,21 +65,24 @@ public class Player_Movement : MonoBehaviour
 
     void HandleJump()
     {
-        if(Mathf.Abs(yInput) > 0 && grounded)
+        if(jumpPressed && grounded)
         {
-            body.linearVelocity = new Vector2(body.linearVelocityX, yInput * jumpSpeed);
+            //body.linearVelocity = new Vector2(body.linearVelocityX, yInput * jumpSpeed);
+            body.linearVelocity = new Vector2(body.linearVelocityX, jumpSpeed);
         }
+        jumpPressed= false;
     }
 
     void CheckGround()
     {
         grounded = Physics2D.OverlapAreaAll(groundCheck.bounds.min, groundCheck.bounds.max, groundMask).Length > 0;
+        
     }
 
     void ApplyFriction()
     {
         //extra check negates the ground stickiness if only moving on the x-axis
-        if (grounded && xInput == 0 && body.linearVelocityY <= 0)
+        if (grounded && xInput == 0 && Mathf.Abs(body.linearVelocityY) == 0)
         {
             body.linearVelocity *= groundDecay;
         }
