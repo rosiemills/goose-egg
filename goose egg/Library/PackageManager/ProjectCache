@@ -1,6 +1,6 @@
 m_ProjectFiles:
   m_ManifestFileStatus:
-    m_FilePath: C:/Users/Danica/OneDrive - Balmoral Hall School/Documents/GitHub/deez_lazs/goose
+    m_FilePath: C:/Users/Danica/OneDrive - Balmoral Hall School/Documents/GitHub/goose-egg/goose
       egg/Packages/manifest.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
@@ -9,7 +9,7 @@ m_ProjectFiles:
       ticks: 639043953311580873
     m_Hash: 156548354
   m_LockFileStatus:
-    m_FilePath: C:/Users/Danica/OneDrive - Balmoral Hall School/Documents/GitHub/deez_lazs/goose
+    m_FilePath: C:/Users/Danica/OneDrive - Balmoral Hall School/Documents/GitHub/goose-egg/goose
       egg/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
@@ -21,7 +21,7 @@ m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_LocalPackages:
   m_LocalFileStatus: []
-m_ProjectPath: C:/Users/Danica/OneDrive - Balmoral Hall School/Documents/GitHub/deez_lazs/goose
+m_ProjectPath: C:/Users/Danica/OneDrive - Balmoral Hall School/Documents/GitHub/goose-egg/goose
   egg/Packages
 m_EditorVersion: 6000.2.6f2 (4a4dcaec6541)
 m_ResolvedPackages:
@@ -30,7 +30,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: C:\Users\Danica\OneDrive - Balmoral Hall School\Documents\GitHub\deez_lazs\goose
+  resolvedPath: C:\Users\Danica\OneDrive - Balmoral Hall School\Documents\GitHub\goose-egg\goose
     egg\Library\PackageCache\com.unity.2d.sprite@331abd9a1e2f
   assetPath: Packages/com.unity.2d.sprite
   name: com.unity.2d.sprite
@@ -111,7 +111,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: C:\Users\Danica\OneDrive - Balmoral Hall School\Documents\GitHub\deez_lazs\goose
+  resolvedPath: C:\Users\Danica\OneDrive - Balmoral Hall School\Documents\GitHub\goose-egg\goose
     egg\Library\PackageCache\com.unity.multiplayer.center@f3fb577b3546
   assetPath: Packages/com.unity.multiplayer.center
   name: com.unity.multiplayer.center

@@ -97,3 +97,7 @@ InitTestScene*.unity*
 
 # Auto-generated scenes by play mode tests
 /[Aa]ssets/[Ii]nit[Tt]est[Ss]cene*.unity*
+goose egg/Library/Bee/backend2.traceevents
+/goose egg/Library/Bee
+/goose egg/Library/Bee
+/goose egg/Temp
