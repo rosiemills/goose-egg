@@ -442,12 +442,11 @@ MonoBehaviour:
   groundCheck: {fileID: 1782338146}
   groundMask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 1
   acceleration: 2
   groundDecay: 0.129
   maxXSpeed: 5
   jumpSpeed: 7
-  grounded: 0
 --- !u!1 &812505247
 GameObject:
   m_ObjectHideFlags: 0
