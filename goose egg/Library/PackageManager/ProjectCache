@@ -1,28 +1,25 @@
 m_ProjectFiles:
   m_ManifestFileStatus:
-    m_FilePath: C:/Users/Danica/OneDrive - Balmoral Hall School/Documents/GitHub/goose-egg/goose
-      egg/Packages/manifest.json
+    m_FilePath: C:/Users/lenovo/Documents/GitHub/goose-egg/goose egg/Packages/manifest.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 639043953311580873
-    m_Hash: 156548354
+      ticks: 639057441650902995
+    m_Hash: 467570312
   m_LockFileStatus:
-    m_FilePath: C:/Users/Danica/OneDrive - Balmoral Hall School/Documents/GitHub/goose-egg/goose
-      egg/Packages/packages-lock.json
+    m_FilePath: C:/Users/lenovo/Documents/GitHub/goose-egg/goose egg/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 639043953311777875
-    m_Hash: 1368524287
+      ticks: 639057441650902995
+    m_Hash: 1089889240
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_LocalPackages:
   m_LocalFileStatus: []
-m_ProjectPath: C:/Users/Danica/OneDrive - Balmoral Hall School/Documents/GitHub/goose-egg/goose
-  egg/Packages
+m_ProjectPath: C:/Users/lenovo/Documents/GitHub/goose-egg/goose egg/Packages
 m_EditorVersion: 6000.2.6f2 (4a4dcaec6541)
 m_ResolvedPackages:
 - packageId: com.unity.2d.sprite@1.0.0
@@ -30,8 +27,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: C:\Users\Danica\OneDrive - Balmoral Hall School\Documents\GitHub\goose-egg\goose
-    egg\Library\PackageCache\com.unity.2d.sprite@331abd9a1e2f
+  resolvedPath: C:\Users\lenovo\Documents\GitHub\goose-egg\goose egg\Library\PackageCache\com.unity.2d.sprite@331abd9a1e2f
   assetPath: Packages/com.unity.2d.sprite
   name: com.unity.2d.sprite
   displayName: 2D Sprite
@@ -111,8 +107,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: C:\Users\Danica\OneDrive - Balmoral Hall School\Documents\GitHub\goose-egg\goose
-    egg\Library\PackageCache\com.unity.multiplayer.center@f3fb577b3546
+  resolvedPath: C:\Users\lenovo\Documents\GitHub\goose-egg\goose egg\Library\PackageCache\com.unity.multiplayer.center@f3fb577b3546
   assetPath: Packages/com.unity.multiplayer.center
   name: com.unity.multiplayer.center
   displayName: Multiplayer Center
