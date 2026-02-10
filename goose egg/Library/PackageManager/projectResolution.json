@@ -1,18 +1,18 @@
 {
   "context": {
-    "projectPath": "C:/Users/Danica/OneDrive - Balmoral Hall School/Documents/GitHub/goose-egg/goose egg/Packages",
+    "projectPath": "C:/Users/lenovo/Documents/GitHub/goose-egg/goose egg/Packages",
     "unityVersion": "6000.2.6f2"
   },
   "inputs": [
-    "C:\\Users\\Danica\\OneDrive - Balmoral Hall School\\Documents\\GitHub\\goose-egg\\goose egg\\Packages\\manifest.json",
-    "C:\\Users\\Danica\\OneDrive - Balmoral Hall School\\Documents\\GitHub\\goose-egg\\goose egg\\Packages\\packages-lock.json",
+    "C:\\Users\\lenovo\\Documents\\GitHub\\goose-egg\\goose egg\\Packages\\manifest.json",
+    "C:\\Users\\lenovo\\Documents\\GitHub\\goose-egg\\goose egg\\Packages\\packages-lock.json",
     "C:\\Program Files\\Unity\\Hub\\Editor\\6000.2.6f2\\Editor\\Data\\Resources\\PackageManager\\BuiltInPackages\\BuiltInPackagesCombined.sha1"
   ],
   "outputs": {
     "com.unity.2d.sprite@1.0.0": {
       "name": "com.unity.2d.sprite",
       "displayName": "2D Sprite",
-      "resolvedPath": "C:\\Users\\Danica\\OneDrive - Balmoral Hall School\\Documents\\GitHub\\goose-egg\\goose egg\\Library\\PackageCache\\com.unity.2d.sprite@331abd9a1e2f",
+      "resolvedPath": "C:\\Users\\lenovo\\Documents\\GitHub\\goose-egg\\goose egg\\Library\\PackageCache\\com.unity.2d.sprite@331abd9a1e2f",
       "fingerprint": "331abd9a1e2ff424a1ef2626e16936071ab7ce3d",
       "editorCompatibility": "2019.2.0a1",
       "version": "1.0.0",
@@ -22,7 +22,7 @@
     "com.unity.multiplayer.center@1.0.0": {
       "name": "com.unity.multiplayer.center",
       "displayName": "Multiplayer Center",
-      "resolvedPath": "C:\\Users\\Danica\\OneDrive - Balmoral Hall School\\Documents\\GitHub\\goose-egg\\goose egg\\Library\\PackageCache\\com.unity.multiplayer.center@f3fb577b3546",
+      "resolvedPath": "C:\\Users\\lenovo\\Documents\\GitHub\\goose-egg\\goose egg\\Library\\PackageCache\\com.unity.multiplayer.center@f3fb577b3546",
       "fingerprint": "f3fb577b3546594b97b8cc34307cd621f60f1c73",
       "editorCompatibility": "6000.0.0a1",
       "version": "1.0.0",
