@@ -441,7 +441,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
   controller: {fileID: 589979233}
   animator: {fileID: 589979223}
-  runSpeed: 40
+  runSpeed: 30
 --- !u!114 &589979233
 MonoBehaviour:
   m_ObjectHideFlags: 0
