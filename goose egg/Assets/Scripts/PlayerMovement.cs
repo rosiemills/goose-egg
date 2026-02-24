@@ -20,7 +20,7 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
+        horizontalMove = Input.GetAxisRaw("Walk") * runSpeed;
 
         //code works w Animator - can change walk/run animation
         animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
@@ -29,6 +29,10 @@ public class PlayerMovement : MonoBehaviour
         {
             jump = true;
             animator.SetBool("IsFlying", true);
+        }
+        if(Input.GetButtonDown(""))
+        {
+            
         }
     }
 
