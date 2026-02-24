@@ -102,3 +102,4 @@ goose egg/Library/Bee/backend2.traceevents
 /goose egg/Library/Bee
 /goose egg/Temp
 goose egg/Library/SourceAssetDB
+/goose egg/Library/APIUpdater/ConfigurationCache

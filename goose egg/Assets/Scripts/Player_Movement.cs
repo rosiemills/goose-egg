@@ -1,3 +1,4 @@
+using System.Reflection;
 using UnityEditor.U2D.Sprites;
 using UnityEngine;
 
@@ -6,6 +7,7 @@ public class Player_Movement : MonoBehaviour
     public Rigidbody2D body;
     public BoxCollider2D groundCheck;
     public LayerMask groundMask;
+    public Animator animator;
 
     public float acceleration;
     [Range(0f, 1f)]
@@ -27,6 +29,7 @@ public class Player_Movement : MonoBehaviour
         {
             jumpPressed= true;
         }
+        //animator.setFloat("Speed", MathF.Abs(xInput));
     }
 
     //usually for physics updates
