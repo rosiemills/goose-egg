@@ -7,7 +7,7 @@ public class PlayerMovement : MonoBehaviour
     public Animator animator;
 
 
-    public float runSpeed = 40f;
+    public float runSpeed = 25f;
     float horizontalMove = 0f;
     bool jump = false;
 
@@ -30,10 +30,15 @@ public class PlayerMovement : MonoBehaviour
             jump = true;
             animator.SetBool("IsFlying", true);
         }
-        if(Input.GetButtonDown(""))
+        if(Input.GetButtonDown("Walk"))
         {
-            
+            runSpeed = 25f;
         }
+        if(Input.GetButtonDown("Run"))
+        {
+            runSpeed = 50f;
+        }
+        
     }
 
     public void OnLanding()
