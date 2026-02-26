@@ -10,6 +10,7 @@ public class PlayerMovement : MonoBehaviour
     public float runSpeed = 25f;
     float horizontalMove = 0f;
     bool jump = false;
+    bool run = false;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -25,24 +26,37 @@ public class PlayerMovement : MonoBehaviour
         //code works w Animator - can change walk/run animation
         animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
 
-        if(Input.GetButtonDown("Jump"))
+        if(Input.GetButtonDown("Jump")) //up or space key
         {
             jump = true;
             animator.SetBool("IsFlying", true);
         }
-        if(Input.GetButtonDown("Walk"))
+        
+        if(Input.GetButtonDown("Walk")) //arrows or AD
+        {
+            run = false;
+            animator.SetBool("IsRunning", false);
+        }
+        if(Input.GetButtonDown("Run"))  //ctrl
+        {
+            run = true;
+            animator.SetBool("IsRunning", true);
+        }
+
+        if(run == false)    //walking
         {
             runSpeed = 25f;
         }
-        if(Input.GetButtonDown("Run"))
+        else    //running
         {
-            runSpeed = 50f;
+            runSpeed = 65f;
         }
         
     }
 
     public void OnLanding()
     {
+        //checks if touching ground - changes to floor animations if so
         animator.SetBool("IsFlying", false);
     }
 
