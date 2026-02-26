@@ -388,7 +388,6 @@
 "Assets/GDD - Quinnipiac/Pixel Art Character Package/Scripts/Grid.cs"
 "Assets/Scripts/CharacterController2D.cs"
 "Assets/Scripts/PlayerMovement.cs"
-"Assets/Scripts/Player_Movement.cs"
 -langversion:9.0
 /deterministic
 /optimize+
