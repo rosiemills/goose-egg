@@ -49,7 +49,7 @@ public class PlayerMovement : MonoBehaviour
         }
         else    //running
         {
-            runSpeed = 65f;
+            runSpeed = 75f;
         }
         
     }
