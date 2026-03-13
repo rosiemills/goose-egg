@@ -784,9 +784,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1161934889}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
+  m_Script: {fileID: 11500000, guid: 93d0c1d7b2aca40219eb4f9df3c2168f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Unity.RenderPipelines.Universal.Runtime::UnityEngine.Rendering.Universal.UniversalAdditionalCameraData
+  offset: {x: 0, y: 0, z: 0}
+  damping: 0
+  target: {fileID: 589979225}
 --- !u!81 &1161934891
 AudioListener:
   m_ObjectHideFlags: 0
