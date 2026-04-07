@@ -12,12 +12,6 @@ public class PlayerMovement : MonoBehaviour
     bool jump = false;
     bool run = false;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
-
     // Update is called once per frame
     void Update()
     {
@@ -30,17 +24,20 @@ public class PlayerMovement : MonoBehaviour
         {
             jump = true;
             animator.SetBool("IsFlying", true);
+            print("jump");
         }
         
         if(Input.GetButtonDown("Walk")) //arrows or AD
         {
             run = false;
             animator.SetBool("IsRunning", false);
+            print("walk");
         }
         if(Input.GetButtonDown("Run"))  //ctrl
         {
             run = true;
             animator.SetBool("IsRunning", true);
+            print("run");
         }
 
         if(run == false)    //walking
@@ -58,6 +55,7 @@ public class PlayerMovement : MonoBehaviour
     {
         //checks if touching ground - changes to floor animations if so
         animator.SetBool("IsFlying", false);
+        print("grounded");
     }
 
     void FixedUpdate()
