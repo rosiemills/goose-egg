@@ -5,6 +5,12 @@ public class PlayerMovement : MonoBehaviour
 {
     public CharacterController2D controller;
     public Animator animator;
+    public AudioSource jumpSoundEffect;
+<<<<<<< Updated upstream
+    public AudioSource landingSoundEffect;
+=======
+>>>>>>> Stashed changes
+
 
 
     public float runSpeed = 25f;
@@ -30,6 +36,7 @@ public class PlayerMovement : MonoBehaviour
         {
             jump = true;
             animator.SetBool("IsFlying", true);
+            jumpSoundEffect.Play();
         }
         
         if(Input.GetButtonDown("Walk")) //arrows or AD
@@ -58,6 +65,8 @@ public class PlayerMovement : MonoBehaviour
     {
         //checks if touching ground - changes to floor animations if so
         animator.SetBool("IsFlying", false);
+
+        landingSoundEffect.Play();
     }
 
     void FixedUpdate()
