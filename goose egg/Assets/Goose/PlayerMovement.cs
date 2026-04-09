@@ -12,6 +12,9 @@ public class PlayerMovement : MonoBehaviour
     bool jump = false;
     bool run = false;
 
+    public float landRate = 5f;
+    float nextLandTime = 0f;
+
     // Update is called once per frame
     void Update()
     {
@@ -54,8 +57,12 @@ public class PlayerMovement : MonoBehaviour
     public void OnLanding()
     {
         //checks if touching ground - changes to floor animations if so
-        animator.SetBool("IsFlying", false);
-        print("grounded");
+        if(Time.time >= nextLandTime)
+        {
+            animator.SetBool("IsFlying", false);
+            print("grounded");
+            nextLandTime = Time.time + 1f / landRate;
+        }
     }
 
     void FixedUpdate()
