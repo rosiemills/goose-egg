@@ -6,7 +6,10 @@ public class PlayerMovement : MonoBehaviour
     public CharacterController2D controller;
     public Animator animator;
     public AudioSource jumpSoundEffect;
+<<<<<<< Updated upstream
     public AudioSource landingSoundEffect;
+=======
+>>>>>>> Stashed changes
 
 
 
