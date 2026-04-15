@@ -213,7 +213,6 @@ GameObject:
   - component: {fileID: 589979229}
   - component: {fileID: 589979231}
   - component: {fileID: 589979232}
-  - component: {fileID: 589979234}
   m_Layer: 3
   m_Name: Goose
   m_TagString: Player
@@ -483,18 +482,6 @@ MonoBehaviour:
   OnCrouchEvent:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &589979234
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 589979222}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd5ce300314d747d0a0aa48c46f16055, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Character
 --- !u!1 &1161934889
 GameObject:
   m_ObjectHideFlags: 0
