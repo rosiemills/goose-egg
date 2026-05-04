@@ -8,50 +8,31 @@ public class Enemy : MonoBehaviour
     public Animator animator;
     public int maxHealth = 100;
     int currentHealth;
-    public float speed;
     
-    //two opposite points for the patrol region
-    public GameObject pointA;
-    public GameObject pointB;
-    private Rigidbody2D rb;
-    private Transform currentPoint;
+    //enemy movement/patrol
+    [SerializeField] private Rigidbody2D rb;
+    [SerializeField] private SpriteRenderer spriteRenderer;
+    [SerializeField] private float speed = 3f;
+    [SerializeField] private int startDirection = 1;
+    private int currentDirection;
+    private float halfWidth;
+    private UnityEngine.Vector2 movement;
+
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    private void Start()
     {
         currentHealth = maxHealth;
-        rb = GetComponent<Rigidbody2D>();
-        currentPoint = pointB.transform;
         animator.SetBool("IsRunning", true);
-
+        halfWidth = spriteRenderer.bounds.extents.x;
+        currentDirection = startDirection;
     }
 
-    void Update()
+    private void FixedUpdate()
     {
-        UnityEngine.Vector2 point = currentPoint.position - transform.position;
-        if(currentPoint == pointB.transform)
-        {
-            rb.linearVelocity = new UnityEngine.Vector2(speed, 0);
-        }
-        else
-        {
-            rb.linearVelocity = new UnityEngine.Vector2(-speed, 0);
-        }
-
-        if(UnityEngine.Vector2.Distance(transform.position, currentPoint.position) < 0.5f && currentPoint == pointB.transform)
-        {
-            currentPoint = pointA.transform;
-        }
-        if(UnityEngine.Vector2.Distance(transform.position, currentPoint.position) < 0.5f && currentPoint == pointA.transform)
-        {
-            currentPoint = pointB.transform;
-        }
-    }
-
-    private void OnDrawGizmos()
-    {
-        Gizmos.DrawWireSphere(pointA.transform.position, 0.5f);
-        Gizmos.DrawWireSphere(pointB.transform.position, 0.5f);
-        Gizmos.DrawLine(pointA.transform.position, pointB.transform.position);
+        movement.x = speed * currentDirection;
+        movement.y = rb.linearVelocity.y;
+        rb.linearVelocity = movement;
     }
 
     public void TakeDamage(int damage)
@@ -68,8 +49,6 @@ public class Enemy : MonoBehaviour
 
     void Die()
     {
-        UnityEngine.Debug.Log("Enemy died!");
-
         animator.SetBool("IsDead", true);
 
         GetComponent<Collider2D>().enabled = false;
