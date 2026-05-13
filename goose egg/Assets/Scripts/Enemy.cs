@@ -21,7 +21,7 @@ public class Enemy : MonoBehaviour
     private float halfWidth;
     private float halfHeight;
     private UnityEngine.Vector2 movement;
-    private bool isGrounded;
+    private bool isGrounded = true;
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -46,7 +46,7 @@ public class Enemy : MonoBehaviour
 
     private void onCollisionStay2D(Collision2D other)
     {
-        if (other.gameObject.CompareTag("Default"))
+        if (other.gameObject.CompareTag("Ground"))
         {
             isGrounded = true;
         }
