@@ -15,11 +15,9 @@ public class PlayerMovement : MonoBehaviour
     bool jump = false;
     bool run = false;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+    //allows the flap animation to work well
+    public float landRate = 5f;
+    float nextLandTime = 0f;
 
     // Update is called once per frame
     void Update()
@@ -61,9 +59,12 @@ public class PlayerMovement : MonoBehaviour
     public void OnLanding()
     {
         //checks if touching ground - changes to floor animations if so
-        animator.SetBool("IsFlying", false);
-
-        landingSoundEffect.Play();
+        if(Time.time >= nextLandTime)
+        {
+            animator.SetBool("IsFlying", false);
+            nextLandTime = Time.time + 1f / landRate;
+            landingSoundEffect.Play();
+        }
     }
 
     void FixedUpdate()
