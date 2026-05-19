@@ -33,7 +33,6 @@ public class movingPlatform : MonoBehaviour
             return; 
         }
 
-        Debug.Log("I am moving: " + gameObject.name);
         Vector2 target = currentMovementTarget();
         platform.position = Vector2.MoveTowards(platform.position, target, speed * Time.deltaTime);
         float distance = (target - (Vector2)platform.position).magnitude;
