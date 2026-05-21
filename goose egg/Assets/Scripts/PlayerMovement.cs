@@ -26,6 +26,8 @@ public class PlayerMovement : MonoBehaviour
 
         //code works w Animator - can change walk/run animation
         animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
+        animator.SetBool("IsRunning", run);
+        animator.SetBool("Attack", fly);
 
         if(Input.GetButtonDown("Jump")) //up or space key
         {
@@ -37,12 +39,14 @@ public class PlayerMovement : MonoBehaviour
         if(Input.GetButtonDown("Walk")) //arrows or AD
         {
             run = false;
-            animator.SetBool("IsRunning", false);
         }
         if(Input.GetButtonDown("Run"))  //ctrl
         {
             run = true;
-            animator.SetBool("IsRunning", true);
+        }
+        if(Input.GetButtonDown("Attack"))   //f
+        {
+            fly = true;
         }
 
         if(run == false)    //walking
