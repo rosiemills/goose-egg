@@ -16,8 +16,10 @@ public class CheckPoint : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     
     {
+        Debug.Log("collided");
         if(collision.gameObject.CompareTag("CheckPoint"))
         {
+            Debug.Log("checkpoint collided");
             LoadNewScene();
             
         }
@@ -26,7 +28,7 @@ public class CheckPoint : MonoBehaviour
 
     void Start()
     {
-       
+
     }
 
     // Update is called once per frame
