@@ -27,12 +27,11 @@ public class PlayerMovement : MonoBehaviour
         //code works w Animator - can change walk/run animation
         animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
         animator.SetBool("IsRunning", run);
-        animator.SetBool("Attack", fly);
+        animator.SetBool("IsFlying", jump);
 
         if(Input.GetButtonDown("Jump")) //up or space key
         {
             jump = true;
-            animator.SetBool("IsFlying", true);
             jumpSoundEffect.Play();
         }
         
@@ -43,10 +42,6 @@ public class PlayerMovement : MonoBehaviour
         if(Input.GetButtonDown("Run"))  //ctrl
         {
             run = true;
-        }
-        if(Input.GetButtonDown("Attack"))   //f
-        {
-            fly = true;
         }
 
         if(run == false)    //walking
@@ -65,7 +60,7 @@ public class PlayerMovement : MonoBehaviour
         //checks if touching ground - changes to floor animations if so
         if(Time.time >= nextLandTime)
         {
-            animator.SetBool("IsFlying", false);
+            jump = false;
             nextLandTime = Time.time + 1f / landRate;
             landingSoundEffect.Play();
         }

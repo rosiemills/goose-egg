@@ -24,7 +24,7 @@ public class PlayerCombat : MonoBehaviour
         //attacks can only happen every so often (can't be spammed)
         if(Time.time >= nextAttackTime)
         {
-            if(Input.GetButtonDown("Attack"))
+            if(Input.GetButtonDown("Attack"))   //f
             {
                 Attack();
                 nextAttackTime = Time.time + 1f / attackRate;
