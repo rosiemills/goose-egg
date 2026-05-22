@@ -2,6 +2,7 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
+using System;
 
 public class PlayerLife : MonoBehaviour
 {
@@ -13,6 +14,8 @@ public class PlayerLife : MonoBehaviour
     public int damage=1;
     private int currHealth;
     public heartUI healthUI;
+
+    public static event Action OnPlayerDied;
     
     void Start()
     {
@@ -39,22 +42,9 @@ public class PlayerLife : MonoBehaviour
 
         if(currHealth<=0)
         {
-            currHealth= 3;
+            OnPlayerDied.Invoke();
         }
     }
 
-    
-
-    // private void Die()
-    // {
-    //     rb.bodyType = RigidbodyType2D.Static;
-    //     RestartLevel();
-    // }
-
-    // private void RestartLevel()
-    // {
-    //     SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-    // }
-    
 
 }
