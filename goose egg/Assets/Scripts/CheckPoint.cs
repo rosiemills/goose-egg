@@ -19,9 +19,7 @@ public class CheckPoint : MonoBehaviour
         Debug.Log("collided");
         if(collision.gameObject.CompareTag("CheckPoint"))
         {
-            Debug.Log("checkpoint collided");
             LoadNewScene();
-            
         }
         
     }
