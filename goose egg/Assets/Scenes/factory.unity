@@ -1161,16 +1161,6 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
-  - first: {x: 14, y: 28, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 1
-      m_TileSpriteIndex: 1
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741825
   - first: {x: 15, y: 28, z: 0}
     second:
       serializedVersion: 2
@@ -1255,15 +1245,15 @@ Tilemap:
   m_TileAssetArray:
   - m_RefCount: 31
     m_Data: {fileID: 11400000, guid: 5af251432cdd6c84ba4be87e1d30a832, type: 2}
-  - m_RefCount: 23
+  - m_RefCount: 22
     m_Data: {fileID: 11400000, guid: c316f45e17266724ebdd6cf59e88b489, type: 2}
   m_TileSpriteArray:
   - m_RefCount: 31
     m_Data: {fileID: -3895223546762608453, guid: 84e73c5fcbc3d324a9bebf3715abc565, type: 3}
-  - m_RefCount: 23
+  - m_RefCount: 22
     m_Data: {fileID: -174504680, guid: 0b25206001c83b94e9773ae185aeacbc, type: 3}
   m_TileMatrixArray:
-  - m_RefCount: 54
+  - m_RefCount: 53
     m_Data:
       e00: 1
       e01: 0
@@ -1282,7 +1272,7 @@ Tilemap:
       e32: 0
       e33: 1
   m_TileColorArray:
-  - m_RefCount: 54
+  - m_RefCount: 53
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
@@ -45040,7 +45030,7 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 1
+  MinDistance: 14.878793
   MaxDistance: 500
   Pan2D: 0
   rolloffMode: 0
@@ -45580,7 +45570,7 @@ Transform:
   m_GameObject: {fileID: 2100602897}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -19.2, y: -9.5, z: 0}
+  m_LocalPosition: {x: -21.1, y: -10.45, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
