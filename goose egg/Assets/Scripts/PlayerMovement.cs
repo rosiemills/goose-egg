@@ -32,6 +32,7 @@ public class PlayerMovement : MonoBehaviour
         if(Input.GetButtonDown("Jump")) //up or space key
         {
             jump = true;
+            animator.SetBool("IsFlying", true);
             jumpSoundEffect.Play();
         }
         
@@ -60,7 +61,7 @@ public class PlayerMovement : MonoBehaviour
         //checks if touching ground - changes to floor animations if so
         if(Time.time >= nextLandTime)
         {
-            jump = false;
+            animator.SetBool("IsFlying", false);
             nextLandTime = Time.time + 1f / landRate;
             landingSoundEffect.Play();
         }
