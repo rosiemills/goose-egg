@@ -15,11 +15,9 @@ public class PlayerMovement : MonoBehaviour
     bool jump = false;
     bool run = false;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+    //allows the flap animation to work well
+    public float landRate = 5f;
+    float nextLandTime = 0f;
 
     // Update is called once per frame
     void Update()
@@ -28,6 +26,8 @@ public class PlayerMovement : MonoBehaviour
 
         //code works w Animator - can change walk/run animation
         animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
+        animator.SetBool("IsRunning", run);
+        animator.SetBool("IsFlying", jump);
 
         if(Input.GetButtonDown("Jump")) //up or space key
         {
@@ -39,12 +39,10 @@ public class PlayerMovement : MonoBehaviour
         if(Input.GetButtonDown("Walk")) //arrows or AD
         {
             run = false;
-            animator.SetBool("IsRunning", false);
         }
         if(Input.GetButtonDown("Run"))  //ctrl
         {
             run = true;
-            animator.SetBool("IsRunning", true);
         }
 
         if(run == false)    //walking
@@ -61,9 +59,12 @@ public class PlayerMovement : MonoBehaviour
     public void OnLanding()
     {
         //checks if touching ground - changes to floor animations if so
-        animator.SetBool("IsFlying", false);
-
-        landingSoundEffect.Play();
+        if(Time.time >= nextLandTime)
+        {
+            animator.SetBool("IsFlying", false);
+            nextLandTime = Time.time + 1f / landRate;
+            landingSoundEffect.Play();
+        }
     }
 
     void FixedUpdate()
