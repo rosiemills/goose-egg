@@ -376,6 +376,37 @@ MonoBehaviour:
   endPoint: {fileID: 1072056555}
   speed: 3
   waitTime: 1
+--- !u!1 &134233121
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 134233122}
+  m_Layer: 0
+  m_Name: attackPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &134233122
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 134233121}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.71, y: 1.11, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2100602909}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &138998001
 GameObject:
   m_ObjectHideFlags: 0
@@ -45140,6 +45171,7 @@ GameObject:
   - component: {fileID: 2100602898}
   - component: {fileID: 2100602910}
   - component: {fileID: 2100602911}
+  - component: {fileID: 2100602912}
   m_Layer: 3
   m_Name: Goose
   m_TagString: Player
@@ -45469,6 +45501,7 @@ MonoBehaviour:
   jumpSoundEffect: {fileID: 2100602900}
   landingSoundEffect: {fileID: 2100602898}
   runSpeed: 30
+  landRate: 5
 --- !u!70 &2100602903
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -45714,6 +45747,7 @@ Transform:
   m_Children:
   - {fileID: 211601027}
   - {fileID: 92927776}
+  - {fileID: 134233122}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2100602910
@@ -45745,6 +45779,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CheckPoint
   checkPointSound: {fileID: 0}
+--- !u!114 &2100602912
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2100602897}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90c1cf9323622bf42be510a828540d29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerCombat
+  animator: {fileID: 2100602906}
+  attackPoint: {fileID: 134233122}
+  enemyLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  attackRange: 1.16
+  attackDamage: 40
+  attackRate: 2
 --- !u!1 &2110410733
 GameObject:
   m_ObjectHideFlags: 0
