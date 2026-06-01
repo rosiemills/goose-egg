@@ -1,9 +1,12 @@
 using System.Diagnostics;
 using System.Drawing;
 using System.Numerics;
-
-//using System.Threading.Tasks.Dataflow;
 using UnityEngine;
+
+/* Connects PlayerCombat with Enemy actions by allowing player to damage enemy. Also allows enemy to patrol between ledges and walls.
+ * Combat on enemy code by Brackeys: https://www.youtube.com/watch?v=sPiVz1k-fEs&t=678s
+ * Patrol code by Wild Cockatiel Games: https://www.youtube.com/watch?v=7mkD9K2nwDM&t=544s, https://www.youtube.com/watch?v=XnoKMNdH-HU
+ */
 
 public class Enemy : MonoBehaviour
 {

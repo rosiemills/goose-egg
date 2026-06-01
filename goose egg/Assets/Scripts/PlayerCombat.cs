@@ -4,6 +4,11 @@ using System.Diagnostics;
 using System.Reflection;
 using UnityEngine;
 
+/*
+ * Allows player to attack enemies.
+ * Code by Brackeys: https://www.youtube.com/watch?v=sPiVz1k-fEs&t=678s
+ */
+
 public class PlayerCombat : MonoBehaviour
 {
     public Animator animator;
