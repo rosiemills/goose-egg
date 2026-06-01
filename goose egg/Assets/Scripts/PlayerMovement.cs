@@ -1,6 +1,12 @@
 using System.Reflection;
 using UnityEngine;
 
+/**
+ * Uses CharacterController2D (from Brackeys) to animate movement - incl. walking, running, jumping (flying)
+ * https://www.youtube.com/watch?v=dwcT-Dch0bA&t=636s
+ * slightly modified
+ */
+
 public class PlayerMovement : MonoBehaviour
 {
     public CharacterController2D controller;
@@ -59,6 +65,7 @@ public class PlayerMovement : MonoBehaviour
     public void OnLanding()
     {
         //checks if touching ground - changes to floor animations if so
+        //fixes jumping animation so it always plays correctly
         if(Time.time >= nextLandTime)
         {
             animator.SetBool("IsFlying", false);
