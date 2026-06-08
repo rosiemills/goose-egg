@@ -1,3 +1,4 @@
+//completed by emily
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -51,7 +52,6 @@ public class movingPlatform : MonoBehaviour
         }
         else
         {
-
             return startPoint.position;
         }
     }
