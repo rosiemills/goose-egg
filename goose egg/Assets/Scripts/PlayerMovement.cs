@@ -4,7 +4,7 @@ using UnityEngine;
 /**
  * Uses CharacterController2D (from Brackeys) to animate movement - incl. walking, running, jumping (flying)
  * https://www.youtube.com/watch?v=dwcT-Dch0bA&t=636s
- * slightly modified
+ * slightly modified by Danica (!!)
  */
 
 public class PlayerMovement : MonoBehaviour

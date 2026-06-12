@@ -7,6 +7,7 @@ using UnityEngine;
 /*
  * Allows player to attack enemies.
  * Code by Brackeys: https://www.youtube.com/watch?v=sPiVz1k-fEs&t=678s
+ * Script completed by Danica
  */
 
 public class PlayerCombat : MonoBehaviour
